@@ -1,0 +1,163 @@
+/* This sucks really. */
+
+/* ================================ */
+/* Reset ========================= */
+/* ============================== */
+* {
+  /* background-color: rgba(255, 0, 50, 0.2); */
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --blue: #009cdf;
+  --white: #ffffff;
+}
+html {
+  font-size: 16px;
+}
+body {
+  background-color: #ffffff;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 100%;
+  width: 100%;
+}
+/* ================================ */
+/* Grid containers =============== */
+/* ============================== */
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2em;
+}
+[class^="col-"] {
+  box-sizing: border-box;
+  padding: 1em;
+}
+.col-1 {
+  width: 8.3333%;
+}
+.col-2 {
+  width: 16.6666%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.3333%;
+}
+.col-5 {
+  width: 41.6666%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.3333%;
+}
+.col-8 {
+  width: 66.6666%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.3333%;
+}
+.col-11 {
+  width: 91.6666%;
+}
+.col-12 {
+  width: 100%;
+}
+.col-md-2 {
+  width: 20%;
+}
+/* ================================ */
+/* Main containers =============== */
+/* ============================== */
+#app {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1200px;
+}
+header,
+nav {
+  padding: 0.5em 0;
+  width: 100%;
+}
+header {
+  margin-top: 2em;
+  padding-top: 0;
+}
+.logo {
+  text-align: center;
+}
+.logo img {
+  width: 100%;
+}
+nav {
+  text-align: center;
+}
+nav ul.menu li {
+  display: inline-block;
+  padding: 0.5em 1em;
+}
+ul.menu {
+  list-style: none;
+}
+main,
+main.col-12 {
+  display: flex;
+  padding: 0;
+}
+#content {
+  display: flex;
+  gap: 4em;
+  flex-wrap: wrap;
+  margin-bottom: 2.5em;
+}
+#content .row .col-4 {
+  display: block;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+#content .row .col-4 h2 {
+  background-color: #009cdf77;
+  background-size: auto 3em;
+  padding: 4px 0;
+  position: absolute;
+  top: calc(50% - 1em);
+  width: 100%;
+}
+#content .row .col-4 img {
+  border: 4px var(--blue) solid;
+  box-sizing: border-box;
+  display: block;
+  max-width: 100%;
+  padding: 0;
+}
+#content .row .col-8 {
+  padding: 0;
+}
+aside.col-2 {
+  padding: 0;
+}
+nav#secondary {
+  text-align: left;
+}
+footer {
+  text-align: center;
+}
+/* ================================ */
+/* Typography ==================== */
+/* ============================== */
+p {
+  line-height: 1.5;
+}
+.col-4 h2 {
+  color: var(--white);
+  text-transform: uppercase;
+}
