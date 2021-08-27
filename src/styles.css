@@ -10,6 +10,7 @@
 }
 :root {
   --blue: #009cdf;
+  --lightblue: #cdeefc;
   --white: #ffffff;
 }
 html {
@@ -22,13 +23,54 @@ body {
   width: 100%;
 }
 /* ================================ */
+/* Typography ==================== */
+/* ============================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--blue);
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 4.25em;
+}
+h2 {
+  font-size: 2.65em;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 0.3em;
+}
+#content .row .col-4 h3 {
+  color: var(--white);
+  background-color: #009cdf77;
+  background-size: auto 3em;
+  padding: 4px 0;
+  position: absolute;
+  text-transform: uppercase;
+  top: calc(50% - 3.5em);
+  width: 100%;
+}
+p {
+  line-height: 1.5;
+}
+a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+a:hover {
+  color: black;
+}
+/* ================================ */
 /* Grid containers =============== */
 /* ============================== */
-.row {
+/* .row {
   display: flex;
   flex-wrap: nowrap;
-  gap: 2em;
-}
+} */
 [class^="col-"] {
   box-sizing: border-box;
   padding: 1em;
@@ -75,7 +117,8 @@ body {
 /* ================================ */
 /* Main containers =============== */
 /* ============================== */
-#app {
+#app,
+footer {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0 15px;
@@ -107,16 +150,20 @@ nav ul.menu li {
 ul.menu {
   list-style: none;
 }
-main,
+main {
+  background-color: var(--white);
+  box-sizing: border-box;
+  padding-top: 2em;
+}
 main.col-12 {
-  display: flex;
   padding: 0;
 }
 #content {
-  display: flex;
-  gap: 4em;
-  flex-wrap: wrap;
+  background-color: var(--white);
+  width: 83.3333%;
   margin-bottom: 2.5em;
+  padding: 0 15px 2em 15px;
+  float: right;
 }
 #content .row .col-4 {
   display: block;
@@ -124,23 +171,35 @@ main.col-12 {
   position: relative;
   text-align: center;
 }
-#content .row .col-4 h2 {
-  background-color: #009cdf77;
-  background-size: auto 3em;
-  padding: 4px 0;
-  position: absolute;
-  top: calc(50% - 1em);
-  width: 100%;
+article {
+  padding-bottom: 4em;
 }
-#content .row .col-4 img {
+article img {
   border: 4px var(--blue) solid;
   box-sizing: border-box;
   display: block;
-  max-width: 100%;
   padding: 0;
+  max-width: 400px;
+  height: auto;
+}
+article img.left {
+  float: left;
+  margin-right: 1em;
+}
+article img.right {
+  float: right;
+  margin-left: 1em;
+}
+article p.clear {
+  clear: both;
+  display: inline;
 }
 #content .row .col-8 {
   padding: 0;
+}
+aside {
+  float: left;
+  background-color: var(--lightblue);
 }
 aside.col-2 {
   padding: 0;
@@ -149,15 +208,18 @@ nav#secondary {
   text-align: left;
 }
 footer {
+  background-color: var(--blue);
+  clear: both;
+  padding: 0;
   text-align: center;
 }
-/* ================================ */
-/* Typography ==================== */
-/* ============================== */
-p {
-  line-height: 1.5;
+footer .row {
+  padding: 0;
 }
-.col-4 h2 {
+footer .row .col-md-2 {
+  display: inline-block;
+  width: calc(20% - 1em);
+}
+footer a {
   color: var(--white);
-  text-transform: uppercase;
 }
